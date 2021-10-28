@@ -1,0 +1,47 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "ajwmd",
+    "ajwm-insight-api",
+    "ajwm-explorer",
+    "web"
+  ], 
+  "servicesConfig": {
+    "ajwm-explorer": {
+      "apiPrefix": "ajwm-insight-api",
+      "routePrefix": "ajwm-explorer",
+      "nodemapLink": "http://yoursite"
+   },
+    "ajwm-insight-api": {
+      "routePrefix": "ajwm-insight-api",
+      "rateLimiterOptions": {
+        "whitelist": [
+          "123.123.123.123",
+          "::ffff:123.123.123.123"
+        ],
+        "whitelistLimit": 9999999,
+        "limit": 20000,
+        "interval": 60000,
+        "banInterval": 3600000
+      },
+      "db": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "database": "ajwm-api-livenet",
+        "user": "",
+        "password": ""
+      },
+      "erc20": {
+        "updateFromBlockHeight": 0
+      }
+    },
+    "ajwmd": {
+      "spawn": {
+        "datadir": "/home/accountuser/.ajwm",
+        "exec": "/home/accountuser/ajwm-bitcore/src/ajwmd"
+      }
+    }
+  }
+}
+

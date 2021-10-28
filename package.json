@@ -1,0 +1,13 @@
+{
+  "description": "QTUM",
+  "repository": "https://github.com/user/project",
+  "license": "MIT",
+  "readme": "README.md",
+  "dependencies": {
+    "ajwmcore-lib": "https://github.com/ajwmproject/ajwmcore-lib.git#master",
+    "ajwmcore-node": "https://github.com/ajwmproject/ajwmcore-node.git#master",
+    "ajwm-explorer": "git+https://github.com/ajwmproject/ajwm-explorer.git#master",
+    "ajwm-insight-api": "git+https://github.com/ajwmproject/insight-api.git#master",
+    "zmq": "^2.15.3"
+  }
+}
